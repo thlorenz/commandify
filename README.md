@@ -99,10 +99,10 @@ COMMANDIFY_CMD='make all' COMMANDIFY_DIR='./compile' browserify -t commandify ma
 <p>The command can be configured</p>
 <h5>inside package.json</h5>
 <pre><code class="lang-json">{
-&quot;browserify&quot;: {
-&quot;transform&quot;: [ &quot;commandify&quot; ]
-},
-&quot;commandify&quot;: &quot;make all&quot;
+  &quot;browserify&quot;: {
+    &quot;transform&quot;: [ &quot;commandify&quot; ]
+  },
+  &quot;commandify&quot;: &quot;make all&quot;
 }</code></pre>
 <p>In this case the command is executed in the directory in which the <code>package.json</code> is defined.</p>
 <h5>via environment variables:</h5>
@@ -111,9 +111,9 @@ COMMANDIFY_CMD='make all' COMMANDIFY_DIR='./compile' browserify -t commandify ma
 <pre><code class="lang-js">commandify.cmd = 'make hello';
 commandify.dir = __dirname + '/compile';
 browserify()
-.require(require.resolve('./makeify/main.js'), { entry: true })
-.bundle()
-.pipe(....);</code></pre>
+  .require(require.resolve('./makeify/main.js'), { entry: true })
+  .bundle()
+  .pipe(....);</code></pre>
 </div>
 <h5>Parameters:</h5>
 <table class="params">
