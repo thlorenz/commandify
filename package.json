@@ -1,7 +1,7 @@
 {
   "name": "commandify",
   "version": "0.0.0",
-  "description": "Executes a command whenever the bundle is refreshed.",
+  "description": "Executes a command whenever the bundle is created.",
   "main": "index.js",
   "scripts": {
     "test": "tap test/*.js"
@@ -19,7 +19,14 @@
     "tap": "~0.4.3",
     "browserify": "~3.24.10"
   },
-  "keywords": [],
+  "keywords": [
+    "browserify",
+    "browserify-transform",
+    "transform",
+    "execute",
+    "command",
+    "make"
+  ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
