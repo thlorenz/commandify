@@ -1,0 +1,10 @@
+{
+  "name": "makeify",
+  "version": "0.0.0",
+  "description": "Lib that needs to have make execute whenever the bundle is refreshed.",
+  "main": "main.js",
+  "browserify": {
+    "transform": [ "commandify" ]
+  },
+  "commandify": "make hi"
+}

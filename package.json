@@ -1,36 +1,35 @@
 {
-    "name" : "commandify",
-    "version" : "0.0.0",
-    "description" : "Executes a command whenever the bundle is refreshed.",
-    "main" : "index.js",
-    "scripts" : {
-      "test-main" :  "tap test/*.js",
-      "test-0.8"  :  "nave use 0.8 npm run test-main",
-      "test-0.10" :  "nave use 0.10 npm run test-main",
-      "test-all": "npm run test-main && npm run test-0.8 && npm run test-0.10",
-      "test"      :  "if [ -e $TRAVIS ]; then npm run test-all; else npm run test-main; fi"
-    },
-    "repository" : {
-      "type" : "git",
-      "url" : "git://github.com/thlorenz/commandify.git"
-    },
-    "homepage" : "https://github.com/thlorenz/commandify",
-    "dependencies" : {
-    },
-    "devDependencies" : {
-      "nave": "~0.4.3",
-      "tape": "~1.0.4",
-      "tap": "~0.4.3"
-    },
-    "keywords": [] ,
-    "author" : {
-      "name" : "Thorsten Lorenz",
-      "email" : "thlorenz@gmx.de",
-      "url" : "http://thlorenz.com"
-    },
-    "license" : {
-      "type": "MIT",
-      "url": "https://github.com/thlorenz/commandify/blob/master/LICENSE"
-    },
-    "engine" : { "node" : ">=0.8" }
+  "name": "commandify",
+  "version": "0.0.0",
+  "description": "Executes a command whenever the bundle is refreshed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/commandify.git"
+  },
+  "homepage": "https://github.com/thlorenz/commandify",
+  "dependencies": {
+    "through2": "~0.4.1",
+    "find-parent-dir": "~0.2.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.3",
+    "browserify": "~3.24.10"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/thlorenz/commandify/blob/master/LICENSE"
+  },
+  "engine": {
+    "node": ">=0.8"
+  }
 }
