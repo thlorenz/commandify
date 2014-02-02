@@ -7,7 +7,7 @@ var through    = require('through2')
 var activator;
 
 function resolveCommand(file, cb) {
-  if (exports.command) return cb(null, { dir: exports.dir, cmd: exports.command });
+  if (exports.cmd) return cb(null, { dir: exports.dir, cmd: exports.cmd });
 
   findParent(file, 'package.json', function (err, dir) {
     if (err) return cb(err);
@@ -57,8 +57,8 @@ exports = module.exports =
  * ##### directly on commandify when bundle step is JavaScript
  *
  * ```js
- * commandify.command = 'make hello';
- * commandify.dir     = __dirname + '/compile';
+ * commandify.cmd = 'make hello';
+ * commandify.dir = __dirname + '/compile';
  * browserify()
  *   .require(require.resolve('./makeify/main.js'), { entry: true })
  *   .bundle()
@@ -100,9 +100,9 @@ function (file) {
 /**
  * The command to be executed (only needed if not defined via `package.json` config).
  * 
- * @name commandify::command
+ * @name commandify::cmd
  */
-exports.command = process.env.COMMANDIFY_CMD;
+exports.cmd = process.env.COMMANDIFY_CMD;
 
 /**
  * The directory in which the command is to be executed (only needed if not defined via `package.json` config).

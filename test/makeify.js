@@ -28,8 +28,8 @@ test('\nrunning browserify on a package with commandify transform registered in 
 
 test('\nrunning browserify on a package with commandify transform registered in package.json which is overridden via variable', function (t) {
   setup();
-  commandify.command = 'make hello';
-  commandify.dir     = __dirname + '/makeify';
+  commandify.cmd = 'make hello';
+  commandify.dir = __dirname + '/makeify';
   browserify()
     .require(require.resolve('./makeify/main.js'), { entry: true })
     .bundle(function (err, res) {

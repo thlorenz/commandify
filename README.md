@@ -19,8 +19,8 @@ Executes a command whenever the bundle is created.
 ### Or configure via JavaScript
 
 ```js
-commandify.command = 'make hello';
-commandify.dir     = __dirname + '/compile';
+commandify.cmd = 'make hello';
+commandify.dir = __dirname + '/compile';
 browserify()
   .require(require.resolve('./makeify/main.js'), { entry: true })
   .bundle()
@@ -53,7 +53,7 @@ COMMANDIFY_CMD='make all' COMMANDIFY_DIR='./compile' browserify -t commandify ma
 </div>
 <dl>
 <dt>
-<h4 class="name" id="commandify::command"><span class="type-signature"></span>commandify::command<span class="type-signature"></span></h4>
+<h4 class="name" id="commandify::cmd"><span class="type-signature"></span>commandify::cmd<span class="type-signature"></span></h4>
 </dt>
 <dd>
 <div class="description">
@@ -108,8 +108,8 @@ COMMANDIFY_CMD='make all' COMMANDIFY_DIR='./compile' browserify -t commandify ma
 <h5>via environment variables:</h5>
 <pre><code class="lang-sh">COMMANDIFY_CMD='make all' COMMANDIFY_DIR='./compile' browserify main.js ....</code></pre>
 <h5>directly on commandify when bundle step is JavaScript</h5>
-<pre><code class="lang-js">commandify.command = 'make hello';
-commandify.dir     = __dirname + '/compile';
+<pre><code class="lang-js">commandify.cmd = 'make hello';
+commandify.dir = __dirname + '/compile';
 browserify()
 .require(require.resolve('./makeify/main.js'), { entry: true })
 .bundle()
