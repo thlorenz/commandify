@@ -22,8 +22,8 @@ function resolveCommand(file, cb) {
 
 function executeCommand(cmd, dir, cb) {
   exec(cmd, { cwd: dir }, function (err, stdout, stderr) {
-    if (stdout) console.error(stdout);
-    if (stderr) console.error(stderr);
+    if (stdout) console.error('commandify:', stdout);
+    if (stderr) console.error('commandify:', stderr);
     cb(err);
   });
 }
